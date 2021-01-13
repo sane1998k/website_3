@@ -1,0 +1,224 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+  src: local("Akzidenz-Grotesk BQ Bold Condensed"), local("../../fonts/Akzidenz-Grotesk-BQ-Bold-Condensed"), url("../../fonts/AkzidenzGroteskBQ-BdCnd.woff2") format("woff2"), url("../../fonts/AkzidenzGroteskBQ-BdCnd.woff") format("woff"), url("../../fonts/AkzidenzGroteskBQ-BdCnd.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue-Regular.eot");
+  src: local("☺"), url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.ttf") format("truetype"), url("../fonts/BebasNeue-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../../fonts/PTSans-Regular.eot");
+  src: local("☺"), url("../../fonts/PTSans-Regular.woff") format("woff"), url("../../fonts/PTSans-Regular.ttf") format("truetype"), url("../../fonts/PTSans-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+.header-top-lang .header-top-lang__link {
+  color: #000000;
+  font-family: Bebas;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 15px;
+}
+.header-top-lang .header-top-lang__link.active {
+  display: inline-block;
+  height: 19px;
+  line-height: 19px;
+  padding: 0 4px;
+  color: #ffffff;
+  background-color: #000;
+}
+.header-top-lang .header-top-lang__link:last-child {
+  margin-right: 0;
+}
+
+.header-bottom-menu-list {
+  display: flex;
+}
+.header-bottom-menu-list li {
+  color: #000000;
+  font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-right: 20px;
+}
+.header-bottom-menu-list li:last-child {
+  margin-right: 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+.header-top .header-top__link {
+  color: #000000;
+  font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20px;
+}
+.header-bottom .header-bottom__column .header-bottom-logo .header-bottom-logo__text {
+  color: #000000;
+  font-family: Bebas;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 797px) {
+  .header-top {
+    justify-content: flex-end;
+  }
+
+  .header-menu__icon {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 30px;
+    height: 18px;
+  }
+  .header-menu__icon span {
+    position: absolute;
+    display: block;
+    background-color: #000;
+    top: 8px;
+    width: 100%;
+    height: 2px;
+  }
+  .header-menu__icon span:first-child {
+    top: 0;
+  }
+  .header-menu__icon span:last-child {
+    top: auto;
+    bottom: 0;
+  }
+
+  .header-bottom {
+    justify-content: center;
+  }
+
+  .header-bottom-menu-list {
+    display: block;
+  }
+  .header-bottom-menu-list li {
+    margin-top: 10px;
+  }
+
+  .header-menu {
+    transition: all ease 0.3s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: #fff;
+    padding: 95px 10px 0px 10px;
+    z-index: 1;
+  }
+  .header-menu.active {
+    left: 0;
+  }
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 880px;
+  padding: 15px;
+  margin: 0 auto;
+}
